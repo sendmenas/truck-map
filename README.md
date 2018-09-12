@@ -1,27 +1,12 @@
-# TruckMap
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.0.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Funkcionalumas:
+# Ekrane matomas vilkiku sarasas (plate number, trailer plate number, vairuotojas) ir google zemelapis.
+# Paspaudus ant vilkiko sarase, zemelapyje sucentruojamas vilkiko buvimo vieta, taip pat atsidaro pop-up kuriame yra platesne info apie vilkika. (koordinates, adresas, kuro lygis bake, greitis).
+# Vilkiko zenkliuka uzdek custom, pop-upa irgi sustylink.
+# Popup turi buti mygtukas, kuri paspaudus galiu ivesti kita vilkika ir paskaiciuoti atstuma iki jo. (Galima skaiciuoti skrydzio atstuma, o jei nori gali kreiptis i google ir gaut marsruta, gal net nupiest ji).
+# Zemelapyje matomi tik tie vilkikai kurie sarase pasirinkti (uzdeti checkbox'ai)
+# Paspaudus ant kito mygtuko, praeitas pup up uzsidaro ir sucentruojamas kitas vilkikas.
+# Viskas turetu buti graziai sustylinta (kadangi pats prasei css :))
+# Bendravimas tarp komponentu turi buti implementuotas PER SERVISUS naudojant subscribtionus.
+# Labai svarbu, kad kodas budu tvarkingas - suformatuotas, nebutu siuksliu.
+# Reikia, kad butu tvarkinga architektura, aisku ka koks komponentas ar servisas daro.
+# Teisingas namingas.
