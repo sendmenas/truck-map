@@ -1,0 +1,18 @@
+<aside class="truck-list">
+  <a class="truck-list__item" *ngFor='let truck of trucks' (click)='onSelect(truck)'>
+    <input type="checkbox">
+    <dl>
+      <dt>driver</dt>
+      <dd>{{ truck.driver }}</dd>
+    </dl>
+    <dl>
+      <dt>plate</dt>
+      <dd>{{ truck.plate }}</dd>
+    </dl>
+    <dl>
+      <dt>trailer plate</dt>
+      <dd>{{ truck.trailerPlate }}</dd>
+    </dl>
+  </a>
+</aside>
+<app-selected-truck></app-selected-truck>

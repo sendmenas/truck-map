@@ -1,1 +1,137 @@
-/* You can add global styles to this file, and also import other style files */
+.trucks-container .trucks-container__map, .main {
+  display: flex;
+  flex-direction: column;
+}
+
+.truck-list {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  height: 100%;
+  overflow: auto;
+}
+.truck-list .truck-list__item {
+  align-items: center;
+  background-color: #628DBD;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  min-width: 325px;
+}
+.truck-list .truck-list__item:hover {
+  background-color: #6F9FD5;
+}
+.truck-list .truck-list__item input {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  width: 35px;
+}
+.truck-list .truck-list__item dl {
+  margin: 10px 0;
+  padding-right: 5px;
+  position: relative;
+  width: 70px;
+}
+.truck-list .truck-list__item dl:first-of-type {
+  width: 150px;
+}
+.truck-list .truck-list__item dl::before {
+  content: "";
+  border-left: 3px solid rgba(0, 0, 0, 0.1);
+  height: 100%;
+  left: -7px;
+  position: absolute;
+}
+.truck-list .truck-list__item dl dt {
+  font-size: 12px;
+  font-style: italic;
+  text-transform: capitalize;
+}
+.truck-list .truck-list__item dl dd {
+  margin: 0;
+  overflow: hidden;
+  padding-right: 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.truck-modal {
+  background-color: #628DBD;
+  color: white;
+  padding: 10px;
+  position: absolute;
+  right: -300px;
+  top: 25px;
+  width: 300px;
+  z-index: 1;
+}
+.truck-modal button {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.truck-modal dl {
+  margin: 0;
+}
+.truck-modal dl dt {
+  padding-top: 10px;
+  font-style: italic;
+  text-transform: capitalize;
+}
+.truck-modal dl dd {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.main {
+  background-color: #222d3A;
+  height: 100%;
+  width: 100%;
+}
+.main .main__title {
+  color: white;
+  height: 40px;
+  margin: 0;
+  padding-left: 40px;
+}
+
+.trucks-container {
+  display: flex;
+  height: calc(100% - 40px);
+  padding: 0 40px;
+  overflow: hidden;
+  width: 100%;
+}
+.trucks-container .trucks-container__list {
+  height: 100%;
+  padding: 25px 0;
+  position: relative;
+  width: 30%;
+}
+.trucks-container .trucks-container__map {
+  flex-grow: 1;
+  width: 70%;
+  padding: 25px 0;
+}
+.trucks-container .trucks-container__map > * {
+  height: 100%;
+}
+
+/*# sourceMappingURL=src/styles.css.map */

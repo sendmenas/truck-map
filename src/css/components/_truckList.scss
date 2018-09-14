@@ -1,0 +1,55 @@
+.truck-list {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    height: 100%;
+    overflow: auto;
+    .truck-list__item {
+        align-items: center;
+        background-color: $blue-dark;
+        border: 1px solid $border-tr;
+        cursor: pointer;
+        color: white;
+        display: flex;
+        justify-content: space-around;
+        min-width: 325px;
+        &:hover {
+            background-color: $blue-light;
+        }
+        input {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            width: 35px;
+        }
+        dl {
+            margin: 10px 0;
+            padding-right: 5px;
+            position: relative;
+            width: 70px;
+            &:first-of-type { 
+                width: 150px;
+            }
+            &::before {
+                content: "";
+                border-left: 3px solid $border-tr;
+                height: 100%;
+                left: -7px;
+                position: absolute;
+            }
+            dt {
+                font-size: 12px;
+                font-style: italic;
+                text-transform: capitalize;
+            }
+            dd {
+                margin: 0;
+                overflow: hidden;
+                padding-right: 5px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+    }
+}

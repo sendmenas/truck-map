@@ -1,0 +1,57 @@
+@import 'css/utils/colors';
+@import 'css/utils/sizes';
+@import 'css/utils/extensions';
+
+@import 'css/components/truckList';
+@import 'css/components/truckModal';
+
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+* {
+	box-sizing: border-box;
+    flex-shrink: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.main {
+    @extend %flex-column;
+    background-color: $black;
+    height: 100%;
+    width: 100%;
+    .main__title {
+        color: white;
+        height: 40px;
+        margin: 0;
+        padding-left: $global-padding;
+    }
+}
+
+.trucks-container {
+    display: flex;
+    height: calc(100% - 40px);
+    padding: 0 $global-padding;
+    overflow: hidden;
+    width: 100%;
+    .trucks-container__list {
+        height: 100%;
+        padding: 25px 0;
+        position: relative;
+        width: 30%;
+    }
+    .trucks-container__map {
+        @extend %flex-column;
+        flex-grow: 1;
+        width: 70%;
+        padding: 25px 0;
+        > * {
+            height: 100%;
+        }
+    }
+}
+

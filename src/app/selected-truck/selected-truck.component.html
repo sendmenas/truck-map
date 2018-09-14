@@ -1,0 +1,17 @@
+<section *ngIf="selectedTruck" class="truck-modal">
+  <button (click)="close()">X</button>
+  <dl>
+    <dt>Driver</dt>
+    <dd>{{ selectedTruck.driver }}</dd>
+    <dt>Trcuk plate number</dt>
+    <dd>{{ selectedTruck.plate }}</dd>
+    <dt>Trailer plate</dt>
+    <dd>{{ selectedTruck.trailerPlate }}</dd>
+    <dt>Fuel level</dt>
+    <dd>{{ selectedTruck.fuel }}</dd>
+    <dt>Address</dt>
+    <dd>{{ selectedTruck.address }}</dd>
+    <dt>Coordinates</dt>
+    <dd>{{ selectedTruck.longitude }}, {{ selectedTruck.latitude }}</dd>
+  </dl>
+</section>
