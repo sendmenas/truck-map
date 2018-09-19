@@ -38,6 +38,7 @@ export class TrucksService {
 
   getTrucks() {
     this.http.get('https://raw.githubusercontent.com/sendmenas/truck-map/master/data.json').subscribe(data => {
+      console.log(data);
       const truckArray: any = data;
       this.dataStore.trucks = truckArray;
       this._trucks.next(Object.assign({}, this.dataStore).trucks);

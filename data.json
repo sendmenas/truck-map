@@ -4,8 +4,8 @@
         "plate": "ABC001",
         "trailerPlate": "BCD001",
         "fuel": 300,
-        "longitude": 25.2644623,
-        "latitude": 54.680535199999994,
+        "longitude": 25.282648,
+        "latitude": 54.686608,
         "address": "address 132"
     },
     {
@@ -13,8 +13,8 @@
         "plate": "DEF002",
         "trailerPlate": "EFG002",
         "fuel": 300,
-        "longitude": 1111,
-        "latitude": 1111,
+        "longitude": 25.239654,
+        "latitude": 54.663124,
         "address": "address 132"
     },
     {
@@ -22,8 +22,8 @@
         "plate": "GHI003",
         "trailerPlate": "HIJ234",
         "fuel": 350,
-        "longitude": 1111,
-        "latitude": 1111,
+        "longitude": 21.071383,
+        "latitude": 55.916804,
         "address": "address 132"
     },
     {
@@ -31,8 +31,8 @@
         "plate": "JKL004",
         "trailerPlate": "KLM004",
         "fuel": 200,
-        "longitude": 1111,
-        "latitude": 1111,
+        "longitude": 21.241793,
+        "latitude": 55.884688,
         "address": "address 132"
     },
     {
@@ -40,8 +40,8 @@
         "plate": "MNO005",
         "trailerPlate": "NOP005",
         "fuel": 250,
-        "longitude": 1111,
-        "latitude": 1111,
+        "longitude": 22.252554,
+        "latitude": 55.984015,
         "address": "address 132"
     },
     {
@@ -49,8 +49,8 @@
         "plate": "PQR006",
         "trailerPlate": "QRS006",
         "fuel": 100,
-        "longitude": 1111,
-        "latitude": 1111,
+        "longitude": 21.526121,
+        "latitude": 56.268771,
         "address": "address 132"
     },
     {
@@ -58,8 +58,8 @@
         "plate": "STU007",
         "trailerPlate": "TUV007",
         "fuel": 150,
-        "longitude": 1111,
-        "latitude": 1111,
+        "longitude": 24.970916,
+        "latitude": 55.838074,
         "address": "address 132"
     },
     {
@@ -67,8 +67,8 @@
         "plate": "VWX008",
         "trailerPlate": "WXY008",
         "fuel": 400,
-        "longitude": 1111,
-        "latitude": 1111,
+        "longitude": 23.842585,
+        "latitude": 55.974906,
         "address": "address 132"
     },
     {
@@ -85,8 +85,8 @@
         "plate": "BCD010",
         "trailerPlate": "CDE010",
         "fuel": 170,
-        "longitude": 1111,
-        "latitude": 1111,
+        "longitude": 24.309374,
+        "latitude": 55.508744,
         "address": "address 132"
     },
     {
@@ -103,8 +103,8 @@
         "plate": "HIJ012",
         "trailerPlate": "IJK012",
         "fuel": 370,
-        "longitude": 1111,
-        "latitude": 1111,
+        "longitude": 24.923411,
+        "latitude": 55.436718,
         "address": "address 132"
     },
     {
@@ -112,8 +112,8 @@
         "plate": "KLM012",
         "trailerPlate": "LMN012",
         "fuel": 140,
-        "longitude": 1111,
-        "latitude": 1111,
+        "longitude": 25.097171,
+        "latitude": 55.520861,
         "address": "address 132"
     },
     {
@@ -121,8 +121,8 @@
         "plate": "NOP013",
         "trailerPlate": "OPQ013",
         "fuel": 220,
-        "longitude": 1111,
-        "latitude": 1111,
+        "longitude": 25.230075,
+        "latitude": 56.018787,
         "address": "address 132"
     },
     {
@@ -130,8 +130,8 @@
         "plate": "QRS014",
         "trailerPlate": "RST014",
         "fuel": 360,
-        "longitude": 1111,
-        "latitude": 1111,
+        "longitude": 55.496428,
+        "latitude": 25.590628,
         "address": "address 132"
     },
     {
@@ -139,8 +139,8 @@
         "plate": "TUV015",
         "trailerPlate": "UVW015",
         "fuel": 190,
-        "longitude": 1111,
-        "latitude": 1111,
+        "longitude": 25.462128,
+        "latitude": 54.851381,
         "address": "address 132"
     },
     {
@@ -148,8 +148,8 @@
         "plate": "QXY015",
         "trailerPlate": "QXY015",
         "fuel": 100,
-        "longitude": 1111,
-        "latitude": 1111,
+        "longitude": 24.456322,
+        "latitude": 54.81178,
         "address": "address 132"
     },
     {
@@ -157,8 +157,8 @@
         "plate": "ZAB016",
         "trailerPlate": "ABC016",
         "fuel": 220,
-        "longitude": 1111,
-        "latitude": 1111,
+        "longitude": 23.039986,
+        "latitude": 54.65431,
         "address": "address 132"
     },
     {
@@ -166,8 +166,8 @@
         "plate": "CDE017",
         "trailerPlate": "DEF017",
         "fuel": 330,
-        "longitude": 1111,
-        "latitude": 1111,
+        "longitude": 22.78119,
+        "latitude": 55.079918,
         "address": "address 132"
     },
     {
@@ -175,8 +175,8 @@
         "plate": "FGH018",
         "trailerPlate": "GHK018",
         "fuel": 480,
-        "longitude": 1111,
-        "latitude": 1111,
+        "longitude": 23.599513,
+        "latitude": 54.878541,
         "address": "address 132"
     },
     {
@@ -184,8 +184,8 @@
         "plate": "KLM019",
         "trailerPlate": "LMN019",
         "fuel": 90,
-        "longitude": 1111,
-        "latitude": 1111,
+        "longitude": 23.649126,
+        "latitude": 54.386583,
         "address": "address 132"
     },
     {
@@ -193,8 +193,8 @@
         "plate": "NOP020",
         "trailerPlate": "OPQ020",
         "fuel": 50,
-        "longitude": 1111,
-        "latitude": 1111,
+        "longitude": 24.56732,
+        "latitude": 54.212203,
         "address": "address 132"
     },
     {
@@ -202,8 +202,8 @@
         "plate": "QRS021",
         "trailerPlate": "RST021",
         "fuel": 270,
-        "longitude": 1111,
-        "latitude": 1111,
+        "longitude": 23.524638,
+        "latitude": 54.231621,
         "address": "address 132"
     },
     {
@@ -211,8 +211,8 @@
         "plate": "TUV024",
         "trailerPlate": "UVW025",
         "fuel": 180,
-        "longitude": 1111,
-        "latitude": 1111,
+        "longitude": 24.036106,
+        "latitude": 54.391843,
         "address": "address 132"
     },
     {
@@ -220,8 +220,8 @@
         "plate": "WXY026",
         "trailerPlate": "XYZ026",
         "fuel": 360,
-        "longitude": 1111,
-        "latitude": 1111,
+        "longitude": 22.978219,
+        "latitude": 55.072222,
         "address": "address 132"
     },
     {
@@ -229,8 +229,8 @@
         "plate": "ZAB027",
         "trailerPlate": "ABC027",
         "fuel": 280,
-        "longitude": 1111,
-        "latitude": 1111,
+        "longitude": 23.976522,
+        "latitude": 55.283315,
         "address": "address 132"
     },
     {
@@ -238,8 +238,8 @@
         "plate": "CDE028",
         "trailerPlate": "DEF028",
         "fuel": 240,
-        "longitude": 1111,
-        "latitude": 1111,
+        "longitude": 23.208067,
+        "latitude": 55.59928,
         "address": "address 132"
     },
     {
@@ -247,8 +247,8 @@
         "plate": "FGH029",
         "trailerPlate": "GHK029",
         "fuel": 120,
-        "longitude": 1111,
-        "latitude": 1111,
+        "longitude": 25.7626,
+        "latitude": 54.985291,
         "address": "address 132"
     },
     {
@@ -256,8 +256,8 @@
         "plate": "KLM030",
         "trailerPlate": "LMN030",
         "fuel": 600,
-        "longitude": 1111,
-        "latitude": 1111,
+        "longitude": 26.453762,
+        "latitude": 55.603435,
         "address": "address 132"
     }
 ]

@@ -12,6 +12,7 @@
         display: flex;
         justify-content: space-around;
         min-width: 325px;
+        transition: background-color 500ms;
         &:hover {
             background-color: $blue-light;
         }
@@ -27,9 +28,9 @@
             margin: 10px 0;
             padding-right: 5px;
             position: relative;
-            width: 70px;
+            width: 75px;
             &:first-of-type { 
-                width: 150px;
+                width: 140px;
             }
             &::before {
                 content: "";
@@ -39,6 +40,7 @@
                 position: absolute;
             }
             dt {
+                color: $black;
                 font-size: 12px;
                 font-style: italic;
                 text-transform: capitalize;
