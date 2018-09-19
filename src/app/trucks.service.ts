@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { Observable, BehaviorSubject } from 'rxjs';
 
 import { Truck } from './truck';
-import { TRUCKS } from './mock-trucks';
 
 
 
@@ -11,17 +11,41 @@ import { TRUCKS } from './mock-trucks';
 })
 
 export class TrucksService {
-  selectedTruckComponent: any;
+  trucks: Observable<Truck[]>;
+  selectedTruck: Observable<Truck>;
+  private _trucks: BehaviorSubject<Truck[]>;
+  private _selectedTruck: BehaviorSubject<Truck>;
+  private dataStore: {
+    trucks: Truck[],
+    selectedTruck: Truck
+  };
+
+  constructor(private http: HttpClient) {
+    this.dataStore = {
+      trucks: [],
+      selectedTruck: null,
+    };
+    this._trucks = <BehaviorSubject<Truck[]>>new BehaviorSubject([]);
+    this.trucks = this._trucks.asObservable();
+    this._selectedTruck = <BehaviorSubject<Truck>>new BehaviorSubject(null);
+    this.selectedTruck = this._selectedTruck.asObservable();
+  }
 
   setSelectedTruck(truck: Truck) {
-    this.selectedTruckComponent.open(truck);
+    this.dataStore.selectedTruck = truck;
+    this._selectedTruck.next(Object.assign({}, this.dataStore).selectedTruck);
   }
 
-  setSelectedTruckComponent(component) {
-    this.selectedTruckComponent = component;
+  getTrucks() {
+    this.http.get('https://raw.githubusercontent.com/sendmenas/truck-map/master/data.json').subscribe(data => {
+      const truckArray: any = data;
+      this.dataStore.trucks = truckArray;
+      this._trucks.next(Object.assign({}, this.dataStore).trucks);
+    });
   }
 
-  getTrucks(): Observable<Truck[]> {
-    return of(TRUCKS);
+  clearSelectedTruck() {
+    this.dataStore.selectedTruck = null;
+    this._selectedTruck.next(Object.assign({}, this.dataStore).selectedTruck);
   }
 }

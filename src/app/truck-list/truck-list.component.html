@@ -1,5 +1,5 @@
 <aside class="truck-list">
-  <a class="truck-list__item" *ngFor='let truck of trucks' (click)='onSelect(truck)'>
+  <a class="truck-list__item" *ngFor='let truck of trucks | async' (click)='onSelect(truck)'>
     <input type="checkbox">
     <dl>
       <dt>driver</dt>
