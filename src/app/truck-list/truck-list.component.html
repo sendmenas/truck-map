@@ -1,6 +1,6 @@
 <aside class="truck-list">
-  <a class="truck-list__item" *ngFor='let truck of trucks | async' (click)='onSelect(truck)'>
-    <input type="checkbox">
+  <a class="truck-list__item" *ngFor="let truck of trucks | async" (click)="onSelect($event, truck)">
+    <input type="checkbox" (change)="onCheckboxChange($event, truck)">
     <dl>
       <dt>driver</dt>
       <dd>{{ truck.driver }}</dd>

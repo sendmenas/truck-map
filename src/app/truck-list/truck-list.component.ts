@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { TrucksService } from '../trucks.service';
 import { Observable } from 'rxjs';
 
@@ -16,8 +16,18 @@ export class TruckListComponent implements OnInit {
 
   constructor(private trucksService: TrucksService) { }
 
-  onSelect(truck: Truck) {
-    this.trucksService.setSelectedTruck(truck);
+  onSelect(event, truck: Truck) {
+    if (event.target.type !== 'checkbox') {
+      this.trucksService.setSelectedTruck(truck);
+    }
+  }
+
+  onCheckboxChange(event, truck: Truck) {
+    if (event.target.checked) {
+      this.trucksService.addTruckToCheckBoxArray(truck);
+    } else {
+      this.trucksService.removeTruckFromCheckBoxArray(truck);
+    }
   }
 
   ngOnInit() {

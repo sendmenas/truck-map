@@ -1,1 +1,4 @@
-<agm-map [latitude]="lat" [longitude]="lng"></agm-map>
+<agm-map [latitude]="lat" [longitude]="lng">
+    <agm-marker *ngIf="selected" [latitude]="lat" [longitude]="lng" [iconUrl]="selectedTruckImage"></agm-marker>
+    <agm-marker *ngFor="let truck of trucks | async" [latitude]="truck.latitude" [longitude]="truck.longitude" [iconUrl]="checkBoxTruckImage"></agm-marker>
+</agm-map>
