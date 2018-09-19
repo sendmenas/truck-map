@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Truck } from '../truck';
 import { TrucksService } from '../trucks.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-selected-truck',
@@ -13,15 +14,13 @@ export class SelectedTruckComponent implements OnInit {
   constructor(private trucksService: TrucksService) { }
 
   ngOnInit() {
-    this.trucksService.setSelectedTruckComponent(this);
-  }
-
-  open(truck: Truck) {
-    this.selectedTruck = truck;
+    this.trucksService.selectedTruck.forEach(truck => {
+      this.selectedTruck = truck;
+    });
   }
 
   close() {
-    this.selectedTruck = null;
+    this.trucksService.clearSelectedTruck();
   }
 
 }

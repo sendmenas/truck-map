@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TrucksService } from '../trucks.service';
+import { Observable } from 'rxjs';
 
 import { Truck } from '../truck';
 
@@ -9,22 +10,19 @@ import { Truck } from '../truck';
   templateUrl: './truck-list.component.html',
   styleUrls: ['./truck-list.component.css']
 })
+
 export class TruckListComponent implements OnInit {
-  trucks: Truck[];
-  selectedTruck: Truck;
+  trucks: Observable<Truck[]>;
 
   constructor(private trucksService: TrucksService) { }
-
-  getTrucks(): void {
-    this.trucksService.getTrucks().subscribe(trucks => this.trucks =  trucks);
-  }
 
   onSelect(truck: Truck) {
     this.trucksService.setSelectedTruck(truck);
   }
 
   ngOnInit() {
-    this.getTrucks();
+    this.trucks = this.trucksService.trucks;
+    this.trucksService.getTrucks();
   }
 
 }

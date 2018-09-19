@@ -2,7 +2,7 @@
     {
         "driver": "Bruce Willis",
         "plate": "ABC001",
-        "trailerplate": "BCD001",
+        "trailerPlate": "BCD001",
         "fuel": 300,
         "longitude": 1111,
         "latitude": 1111,
@@ -11,7 +11,7 @@
     {
         "driver": "Bonnie Bedelia",
         "plate": "DEF002",
-        "trailerplate": "EFG002",
+        "trailerPlate": "EFG002",
         "fuel": 300,
         "longitude": 1111,
         "latitude": 1111,
@@ -20,7 +20,7 @@
     {
         "driver": "Reginald VelJohnson",
         "plate": "GHI003",
-        "trailerplate": "HIJ234",
+        "trailerPlate": "HIJ234",
         "fuel": 350,
         "longitude": 1111,
         "latitude": 1111,
@@ -29,7 +29,7 @@
     {
         "driver": "Paul Gleason",
         "plate": "JKL004",
-        "trailerplate": "KLM004",
+        "trailerPlate": "KLM004",
         "fuel": 200,
         "longitude": 1111,
         "latitude": 1111,
@@ -38,7 +38,7 @@
     {
         "driver": "William Atherton",
         "plate": "MNO005",
-        "trailerplate": "NOP005",
+        "trailerPlate": "NOP005",
         "fuel": 250,
         "longitude": 1111,
         "latitude": 1111,
@@ -47,7 +47,7 @@
     {
         "driver": "Hart Bochner",
         "plate": "PQR006",
-        "trailerplate": "QRS006",
+        "trailerPlate": "QRS006",
         "fuel": 100,
         "longitude": 1111,
         "latitude": 1111,
@@ -56,7 +56,7 @@
     {
         "driver": "James Shigeta",
         "plate": "STU007",
-        "trailerplate": "TUV007",
+        "trailerPlate": "TUV007",
         "fuel": 150,
         "longitude": 1111,
         "latitude": 1111,
@@ -65,7 +65,7 @@
     {
         "driver": "Alan Rickman",
         "plate": "VWX008",
-        "trailerplate": "WXY008",
+        "trailerPlate": "WXY008",
         "fuel": 400,
         "longitude": 1111,
         "latitude": 1111,
@@ -74,7 +74,7 @@
     {
         "driver": "Alexander Godunov",
         "plate": "YZA009",
-        "trailerplate": "ZAB009",
+        "trailerPlate": "ZAB009",
         "fuel": 450,
         "longitude": 1111,
         "latitude": 1111,
@@ -83,7 +83,7 @@
     {
         "driver": "Bruno Doyon",
         "plate": "BCD010",
-        "trailerplate": "CDE010",
+        "trailerPlate": "CDE010",
         "fuel": 170,
         "longitude": 1111,
         "latitude": 1111,
@@ -92,7 +92,7 @@
     {
         "driver": "Devoreaux White",
         "plate": "EFG011",
-        "trailerplate": "FGH011",
+        "trailerPlate": "FGH011",
         "fuel": 290,
         "longitude": 1111,
         "latitude": 1111,
@@ -101,7 +101,7 @@
     {
         "driver": "Andreas Wisniewski",
         "plate": "HIJ012",
-        "trailerplate": "IJK012",
+        "trailerPlate": "IJK012",
         "fuel": 370,
         "longitude": 1111,
         "latitude": 1111,
@@ -110,7 +110,7 @@
     {
         "driver": "Clarence Gilyard Jr.",
         "plate": "KLM012",
-        "trailerplate": "LMN012",
+        "trailerPlate": "LMN012",
         "fuel": 140,
         "longitude": 1111,
         "latitude": 1111,
@@ -119,7 +119,7 @@
     {
         "driver": "Joey Plewa",
         "plate": "NOP013",
-        "trailerplate": "OPQ013",
+        "trailerPlate": "OPQ013",
         "fuel": 220,
         "longitude": 1111,
         "latitude": 1111,
@@ -128,7 +128,7 @@
     {
         "driver": "Lorenzo Caccialanza",
         "plate": "QRS014",
-        "trailerplate": "RST014",
+        "trailerPlate": "RST014",
         "fuel": 360,
         "longitude": 1111,
         "latitude": 1111,
@@ -137,7 +137,7 @@
     {
         "driver": "Yuliya Snigir",
         "plate": "TUV015",
-        "trailerplate": "UVW015",
+        "trailerPlate": "UVW015",
         "fuel": 190,
         "longitude": 1111,
         "latitude": 1111,
@@ -146,7 +146,7 @@
     {
         "driver": "Franco Nero",
         "plate": "QXY015",
-        "trailerplate": "QXY015",
+        "trailerPlate": "QXY015",
         "fuel": 100,
         "longitude": 1111,
         "latitude": 1111,
@@ -155,7 +155,7 @@
     {
         "driver": "William Sadler",
         "plate": "ZAB016",
-        "trailerplate": "ABC016",
+        "trailerPlate": "ABC016",
         "fuel": 220,
         "longitude": 1111,
         "latitude": 1111,
@@ -164,7 +164,7 @@
     {
         "driver": "John Amos",
         "plate": "CDE017",
-        "trailerplate": "DEF017",
+        "trailerPlate": "DEF017",
         "fuel": 330,
         "longitude": 1111,
         "latitude": 1111,
@@ -173,7 +173,7 @@
     {
         "driver": "Dennis Franz",
         "plate": "FGH018",
-        "trailerplate": "GHK018",
+        "trailerPlate": "GHK018",
         "fuel": 480,
         "longitude": 1111,
         "latitude": 1111,
@@ -182,7 +182,7 @@
     {
         "driver": "Art Evans",
         "plate": "KLM019",
-        "trailerplate": "LMN019",
+        "trailerPlate": "LMN019",
         "fuel": 90,
         "longitude": 1111,
         "latitude": 1111,
@@ -191,7 +191,7 @@
     {
         "driver": "Fred Dalton Thompson",
         "plate": "NOP020",
-        "trailerplate": "OPQ020",
+        "trailerPlate": "OPQ020",
         "fuel": 50,
         "longitude": 1111,
         "latitude": 1111,
@@ -200,7 +200,7 @@
     {
         "driver": "Tom Bower",
         "plate": "QRS021",
-        "trailerplate": "RST021",
+        "trailerPlate": "RST021",
         "fuel": 270,
         "longitude": 1111,
         "latitude": 1111,
@@ -209,7 +209,7 @@
     {
         "driver": "Sheila McCarthy",
         "plate": "TUV024",
-        "trailerplate": "UVW025",
+        "trailerPlate": "UVW025",
         "fuel": 180,
         "longitude": 1111,
         "latitude": 1111,
@@ -218,7 +218,7 @@
     {
         "driver": "Don Harvey",
         "plate": "WXY026",
-        "trailerplate": "XYZ026",
+        "trailerPlate": "XYZ026",
         "fuel": 360,
         "longitude": 1111,
         "latitude": 1111,
@@ -227,7 +227,7 @@
     {
         "driver": "Tony Ganios",
         "plate": "ZAB027",
-        "trailerplate": "ABC027",
+        "trailerPlate": "ABC027",
         "fuel": 280,
         "longitude": 1111,
         "latitude": 1111,
@@ -236,7 +236,7 @@
     {
         "driver": "Peter Nelson",
         "plate": "CDE028",
-        "trailerplate": "DEF028",
+        "trailerPlate": "DEF028",
         "fuel": 240,
         "longitude": 1111,
         "latitude": 1111,
@@ -245,7 +245,7 @@
     {
         "driver": "Jai Courtney",
         "plate": "FGH029",
-        "trailerplate": "GHK029",
+        "trailerPlate": "GHK029",
         "fuel": 120,
         "longitude": 1111,
         "latitude": 1111,
@@ -254,7 +254,7 @@
     {
         "driver": "Sebastian Koch",
         "plate": "KLM030",
-        "trailerplate": "LMN030",
+        "trailerPlate": "LMN030",
         "fuel": 600,
         "longitude": 1111,
         "latitude": 1111,

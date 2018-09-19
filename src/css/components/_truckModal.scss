@@ -14,12 +14,16 @@
     }
     dl {
         margin: 0;
-        dt{
+        dt {
             padding-top: 10px;
             font-style: italic;
             text-transform: capitalize;
+            &::after {
+                content: " :";
+            }
         }
         dd {
+            border-bottom: 1px solid $border-tr;
             margin: 0;
         }
     }
