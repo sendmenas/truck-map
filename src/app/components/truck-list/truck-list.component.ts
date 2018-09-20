@@ -1,8 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { TrucksService } from '../trucks.service';
+import { Component, OnInit } from '@angular/core';
+import { TrucksService } from '../../services/trucks.service';
 import { Observable } from 'rxjs';
 
-import { Truck } from '../truck';
+import { Truck } from '../../structures/truck';
 
 
 @Component({

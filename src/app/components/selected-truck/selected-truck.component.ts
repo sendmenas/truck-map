@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Truck } from '../truck';
-import { TrucksService } from '../trucks.service';
+import { Truck } from '../../structures/truck';
+import { TrucksService } from '../../services/trucks.service';
 import { Observable } from 'rxjs';
 
 @Component({
