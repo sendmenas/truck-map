@@ -1,11 +1,12 @@
-.trucks-container .trucks-container__map, .main {
+.trucks-container .trucks-container__map, .main, .route-modal, .selection-dialog .selection-dialog__list, .selection-dialog, .truck-modal {
   display: flex;
   flex-direction: column;
 }
 
 .truck-list {
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  background-color: #628DBD;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
   height: 100%;
   overflow: auto;
 }
@@ -24,9 +25,10 @@
   background-color: #6F9FD5;
 }
 .truck-list .truck-list__item input {
+  align-items: center;
   cursor: pointer;
   display: flex;
-  align-items: center;
+  height: 17px;
   justify-content: center;
   margin: 0;
   width: 35px;
@@ -51,6 +53,7 @@
   color: #222D3A;
   font-size: 12px;
   font-style: italic;
+  font-weight: bold;
   text-transform: capitalize;
 }
 .truck-list .truck-list__item dl dd {
@@ -58,21 +61,22 @@
   overflow: hidden;
   padding-right: 5px;
   text-overflow: ellipsis;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
   white-space: nowrap;
 }
 
 .truck-modal {
   background-color: #628DBD;
-  border-bottom-right-radius: 10px;
+  border-bottom-right-radius: 15px;
   color: white;
   padding: 15px;
   position: absolute;
   right: -300px;
-  top: 25px;
+  top: 0;
   width: 300px;
   z-index: 1;
 }
-.truck-modal button {
+.truck-modal .close {
   background: inherit;
   border: none;
   cursor: pointer;
@@ -83,10 +87,14 @@
   top: 15px;
   width: 15px;
 }
-.truck-modal button i {
+.truck-modal .close i {
   color: white;
   height: 15px;
   width: 15px;
+}
+.truck-modal .button--select-truck {
+  align-self: flex-end;
+  margin-top: 15px;
 }
 .truck-modal dl {
   margin: 0;
@@ -95,6 +103,7 @@
   color: #222D3A;
   font-style: italic;
   font-size: 14px;
+  font-weight: bold;
   padding-top: 10px;
   text-transform: capitalize;
 }
@@ -105,6 +114,102 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   margin: 0;
   padding-bottom: 3px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.selection-dialog {
+  background-color: #222D3A;
+  border: 2px solid #6F9FD5;
+  border-radius: 18px;
+  height: 50vh;
+  min-width: 350px;
+  max-width: 80vw;
+  padding: 10px;
+}
+.selection-dialog .selection-dialog__input {
+  border: none;
+  border-radius: 18px;
+  font-size: 16px;
+  height: 35px;
+  outline: none;
+  padding: 10px;
+}
+.selection-dialog .selection-dialog__list {
+  color: white;
+  height: calc(100% - 85px);
+  margin: 10px 0 0 0;
+  padding: 0;
+  overflow: auto;
+}
+.selection-dialog .selection-dialog__list .selection-dialog__list__item {
+  border-radius: 18px;
+  cursor: pointer;
+  display: flex;
+  padding: 10px;
+  transition: background-color 500ms;
+}
+.selection-dialog .selection-dialog__list .selection-dialog__list__item:hover {
+  background-color: #6F9FD5;
+}
+.selection-dialog .button--selection-dialog {
+  align-self: center;
+  background-color: #2F7CD6;
+  margin-top: 10px;
+}
+.selection-dialog .button--selection-dialog:hover {
+  background-color: rgba(47, 124, 214, 0.8);
+}
+
+.route-modal {
+  background-color: #628DBD;
+  border-bottom-left-radius: 15px;
+  color: white;
+  padding: 15px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 300px;
+  z-index: 1;
+}
+.route-modal .close {
+  background: inherit;
+  border: none;
+  cursor: pointer;
+  height: 15px;
+  padding: 0;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 15px;
+}
+.route-modal .close i {
+  color: white;
+  height: 15px;
+  width: 15px;
+}
+.route-modal .button--select-truck {
+  align-self: flex-end;
+  margin-top: 15px;
+}
+.route-modal dl {
+  margin: 0;
+}
+.route-modal dl dt {
+  color: #222D3A;
+  font-style: italic;
+  font-size: 14px;
+  font-weight: bold;
+  padding-top: 10px;
+  text-transform: capitalize;
+}
+.route-modal dl dt::after {
+  content: ":";
+}
+.route-modal dl dd {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 0;
+  padding-bottom: 3px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
 
 html, body {
@@ -122,37 +227,84 @@ html, body {
 }
 
 .main {
-  background-color: #222D3A;
+  background: linear-gradient(135deg, #217f7a, #1b3c6b);
   height: 100%;
+  position: relative;
   width: 100%;
 }
 .main .main__title {
+  align-items: center;
   color: white;
-  height: 40px;
+  display: flex;
+  height: 100px;
   margin: 0;
   padding-left: 40px;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
 }
 
 .trucks-container {
   display: flex;
-  height: calc(100% - 40px);
+  height: calc(100% - 100px);
   padding: 0 40px;
   overflow: hidden;
   width: 100%;
 }
 .trucks-container .trucks-container__list {
-  height: 100%;
-  padding: 25px 0;
+  box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.2);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  flex-grow: 1;
+  margin-bottom: 25px;
   position: relative;
   width: 30%;
 }
 .trucks-container .trucks-container__map {
+  box-shadow: 0 5px 10px 2px rgba(0, 0, 0, 0.2);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: relative;
   flex-grow: 1;
   width: 70%;
-  padding: 25px 0;
+  margin-bottom: 25px;
 }
 .trucks-container .trucks-container__map > * {
   height: 100%;
+}
+
+.trucks-selection-dialog {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.button {
+  align-items: center;
+  background-color: initial;
+  border: 2px solid #6F9FD5;
+  border-radius: 18px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  font-size: 14px;
+  height: 28px;
+  justify-content: center;
+  outline: none;
+  text-transform: capitalize;
+  width: 90px;
+}
+.button:active {
+  transform: scale(0.95);
+}
+.button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 /*# sourceMappingURL=src/styles.css.map */

@@ -1,0 +1,52 @@
+.truck-modal {
+    @extend %flex-column;
+    background-color: $blue-dark;
+    border-bottom-right-radius: 15px;
+    color: white;
+    padding: 15px;
+    position: absolute;
+    right: -300px;
+    top: 0;
+    width: 300px;
+    z-index: 1;
+    .close {
+        background: inherit;
+        border: none;
+        cursor: pointer;
+        height: 15px;
+        padding: 0;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        width: 15px;
+        i {
+            color: white;
+            height: 15px;
+            width: 15px;
+        }
+    }
+    .button--select-truck {
+        align-self: flex-end;
+        margin-top: 15px;
+    }
+    dl {
+        margin: 0;
+        dt {
+            color: $black;
+            font-style: italic;
+            font-size: 14px;
+            font-weight: bold;
+            padding-top: 10px;
+            text-transform: capitalize;
+            &::after {
+                content: ":";
+            }
+        }
+        dd {
+            border-bottom: 1px solid $border-tr;
+            margin: 0;
+            padding-bottom: 3px;
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+        }
+    }
+}

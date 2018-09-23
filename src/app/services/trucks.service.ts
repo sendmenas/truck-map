@@ -4,70 +4,60 @@ import { Observable, BehaviorSubject } from 'rxjs';
 
 import { Truck } from '../structures/truck';
 
-
-
 @Injectable({
   providedIn: 'root'
 })
 
 export class TrucksService {
-  trucks: Observable<Truck[]>;
-  checkBoxTruckArray: Observable<Truck[]>;
-  selectedTruck: Observable<Truck>;
-  private _trucks: BehaviorSubject<Truck[]>;
-  private _checkBoxTruckArray: BehaviorSubject<Truck[]>;
-  private _selectedTruck: BehaviorSubject<Truck>;
-  private dataStore: {
-    trucks: Truck[],
-    checkBoxTruckArray: Truck[],
-    selectedTruck: Truck
-  };
+  private trucks: BehaviorSubject<Truck[]>;
+  private selectedTruck: BehaviorSubject<Truck>;
+  private checkBoxTruckArray: BehaviorSubject<Truck[]>;
+  private _checkBoxTruckArray: Truck[];
 
   constructor(private http: HttpClient) {
-    this.dataStore = {
-      trucks: [],
-      checkBoxTruckArray: [],
-      selectedTruck: null,
-    };
-    this._trucks = <BehaviorSubject<Truck[]>>new BehaviorSubject([]);
-    this.trucks = this._trucks.asObservable();
-    this._checkBoxTruckArray = <BehaviorSubject<Truck[]>>new BehaviorSubject([]);
-    this.checkBoxTruckArray = this._checkBoxTruckArray.asObservable();
-    this._selectedTruck = <BehaviorSubject<Truck>>new BehaviorSubject(null);
-    this.selectedTruck = this._selectedTruck.asObservable();
+    this.trucks = new BehaviorSubject([]);
+    this.selectedTruck = new BehaviorSubject(null);
+    this.checkBoxTruckArray = new BehaviorSubject([]);
+    this._checkBoxTruckArray = [];
+  }
+
+  requestTrucksFromServer() {
+    this.http.get('https://raw.githubusercontent.com/sendmenas/truck-map/master/data.json').subscribe(data => {
+      const truckArray: any = data;
+      this.trucks.next(truckArray);
+    });
   }
 
   setSelectedTruck(truck: Truck) {
-    this.dataStore.selectedTruck = truck;
-    this._selectedTruck.next(Object.assign({}, this.dataStore).selectedTruck);
+    this.selectedTruck.next(truck);
   }
 
   clearSelectedTruck() {
-    this.dataStore.selectedTruck = null;
-    this._selectedTruck.next(Object.assign({}, this.dataStore).selectedTruck);
+    this.selectedTruck.next(null);
   }
 
   addTruckToCheckBoxArray(truck: Truck) {
-    this.dataStore.checkBoxTruckArray.push(truck);
-    this._checkBoxTruckArray.next(Object.assign({}, this.dataStore).checkBoxTruckArray);
-    console.log(this.dataStore);
+    this._checkBoxTruckArray.push(truck);
+    this.checkBoxTruckArray.next(this._checkBoxTruckArray);
   }
 
   removeTruckFromCheckBoxArray(truck: Truck) {
-    const itemIndex = this.dataStore.checkBoxTruckArray.findIndex(item => {
+    const itemIndex = this._checkBoxTruckArray.findIndex(item => {
       return item === truck;
     });
-    this.dataStore.checkBoxTruckArray.splice(itemIndex, 1);
-    this._checkBoxTruckArray.next(Object.assign({}, this.dataStore).checkBoxTruckArray);
-    console.log(this.dataStore);
+    this._checkBoxTruckArray.splice(itemIndex, 1);
+    this.checkBoxTruckArray.next(this._checkBoxTruckArray);
   }
 
-  getTrucks() {
-    this.http.get('https://raw.githubusercontent.com/sendmenas/truck-map/master/data.json').subscribe(data => {
-      const truckArray: any = data;
-      this.dataStore.trucks = truckArray;
-      this._trucks.next(Object.assign({}, this.dataStore).trucks);
-    });
+  getTrucks(): Observable<Truck[]> {
+    return this.trucks.asObservable();
   }
 
+  getSelectedTruck(): Observable<Truck> {
+    return this.selectedTruck.asObservable();
+  }
+
+  getCheckedTrucks(): Observable<Truck[]> {
+    return this.checkBoxTruckArray.asObservable();
+  }
 }

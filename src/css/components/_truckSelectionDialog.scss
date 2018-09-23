@@ -1,0 +1,44 @@
+.selection-dialog {
+    @extend %flex-column;
+    background-color: $black;
+	border: 2px solid $blue_light;
+    border-radius: $rounded-corner;
+    height: 50vh;
+    min-width: 350px;
+    max-width: 80vw;
+    padding: 10px;
+    .selection-dialog__input {
+        border: none;
+        border-radius: $rounded-corner;
+        font-size: 16px;
+        height: 35px;
+        outline: none;
+        padding: 10px;
+    }
+    .selection-dialog__list {
+        @extend %flex-column;
+        color: white;
+        height: calc(100% - 85px);
+        margin: 10px 0 0 0;
+        padding: 0;
+        overflow: auto;
+        .selection-dialog__list__item {
+            border-radius: $rounded-corner;
+            cursor: pointer;
+            display: flex;
+            padding: 10px;
+            transition: background-color 500ms;
+            &:hover {
+                background-color: $blue-light;
+            }
+        }
+    }
+    .button--selection-dialog {
+        align-self: center;
+        background-color: $blue;
+        margin-top: 10px;
+        &:hover {
+	    	background-color: $blue-hover;
+	    }
+    }
+}

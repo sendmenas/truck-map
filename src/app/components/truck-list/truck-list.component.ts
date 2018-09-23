@@ -3,23 +3,27 @@ import { TrucksService } from '../../services/trucks.service';
 import { Observable } from 'rxjs';
 
 import { Truck } from '../../structures/truck';
+import { MapDataManagerService } from '../../services/map-data.service';
 
 
 @Component({
   selector: 'app-truck-list',
   templateUrl: './truck-list.component.html',
-  styleUrls: ['./truck-list.component.css']
 })
 
 export class TruckListComponent implements OnInit {
-  trucks: Observable<Truck[]>;
+  trucks: Truck[];
 
-  constructor(private trucksService: TrucksService) { }
+  constructor(
+    private trucksService: TrucksService,
+    private mapService: MapDataManagerService
+  ) { }
 
   onSelect(event, truck: Truck) {
     if (event.target.type !== 'checkbox') {
       this.trucksService.setSelectedTruck(truck);
     }
+    this.mapService.setOrigin(truck);
   }
 
   onCheckboxChange(event, truck: Truck) {
@@ -31,8 +35,10 @@ export class TruckListComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.trucks = this.trucksService.trucks;
-    this.trucksService.getTrucks();
+    this.trucksService.getTrucks().subscribe(trucks => {
+      this.trucks = trucks;
+    });
+    this.trucksService.requestTrucksFromServer();
   }
 
 }

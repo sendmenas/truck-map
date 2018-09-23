@@ -1,0 +1,10 @@
+<div class="trucks-selection-dialog" *ngIf="display">
+  <section class="selection-dialog">
+    <input class="selection-dialog__input" type="text" [(ngModel)]="searchText" placeholder="Enter name or plate number">
+    <ul class="selection-dialog__list">
+      <li class="selection-dialog__list__item" *ngFor="let truck of trucks | truckFilter: searchText" (click)="truckSelected(truck)">{{
+        truck.driver }}, {{ truck.plate }}</li>
+    </ul>
+    <button class="button button--selection-dialog" (click)="closeDialog()">close</button>
+  </section>
+</div>

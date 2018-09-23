@@ -1,0 +1,13 @@
+<section *ngIf="routeDataReady" class="route-modal">
+  <button (click)="close()" class="close"><i class="fa fa-times fa-lg" aria-hidden="true"></i></button>
+  <dl>
+    <dt>Distance</dt>
+    <dd>{{ routeData.distance.text }}</dd>
+    <dt>Duration</dt>
+    <dd>{{ routeData.duration.text }}</dd>
+    <dt>Start address</dt>
+    <dd>{{ routeData.start_address }}</dd>
+    <dt>End address</dt>
+    <dd>{{ routeData.end_address }}</dd>
+  </dl>
+</section>

@@ -2,21 +2,28 @@ import { Component, OnInit } from '@angular/core';
 import { Truck } from '../../structures/truck';
 import { TrucksService } from '../../services/trucks.service';
 import { Observable } from 'rxjs';
+import { DialogsService } from '../../services/dialogs.service';
 
 @Component({
   selector: 'app-selected-truck',
   templateUrl: './selected-truck.component.html',
-  styleUrls: ['./selected-truck.component.css']
 })
 
 export class SelectedTruckComponent implements OnInit {
   selectedTruck: Truck;
-  constructor(private trucksService: TrucksService) { }
+  constructor(
+    private trucksService: TrucksService,
+    private dialogService: DialogsService
+  ) { }
 
   ngOnInit() {
-    this.trucksService.selectedTruck.forEach(truck => {
+    this.trucksService.getSelectedTruck().subscribe(truck => {
       this.selectedTruck = truck;
     });
+  }
+
+  showTrucksList() {
+    this.dialogService.displayDialog();
   }
 
   close() {

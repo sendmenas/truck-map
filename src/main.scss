@@ -3,7 +3,9 @@
 @import 'css/utils/extensions';
 
 @import 'css/components/truckList';
-@import 'css/components/truckModal';
+@import 'css/components/selectedTruck';
+@import 'css/components/truckSelectionDialog';
+@import 'css/components/routeModal';
 
 html, body {
     height: 100%;
@@ -21,37 +23,83 @@ html, body {
 
 .main {
     @extend %flex-column;
-    background-color: $black;
+    background: linear-gradient(135deg, #217f7a, #1b3c6b);
     height: 100%;
+    position: relative;
     width: 100%;
     .main__title {
+        align-items: center;
         color: white;
-        height: 40px;
+        display: flex;
+        height: 100px;
         margin: 0;
         padding-left: $global-padding;
+        text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
     }
 }
 
 .trucks-container {
     display: flex;
-    height: calc(100% - 40px);
+    height: calc(100% - 100px);
     padding: 0 $global-padding;
     overflow: hidden;
     width: 100%;
     .trucks-container__list {
-        height: 100%;
-        padding: 25px 0;
+        box-shadow: 0 5px 10px 2px $shadow;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        flex-grow: 1;
+        margin-bottom: 25px;
         position: relative;
         width: 30%;
     }
     .trucks-container__map {
+        box-shadow: 0 5px 10px 2px $shadow;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
         @extend %flex-column;
+        position: relative;
         flex-grow: 1;
         width: 70%;
-        padding: 25px 0;
+        margin-bottom: 25px;
         > * {
             height: 100%;
         }
     }
 }
 
+.trucks-selection-dialog {
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.button {
+	align-items: center;
+	background-color: initial;
+	border: 2px solid $blue_light;
+	border-radius: $rounded-corner;
+	box-shadow: 0 0 10px $shadow;
+	color: white;
+	cursor: pointer;
+	display: flex;
+    font-size: 14px;
+	height: 28px;
+	justify-content: center;
+	outline: none;
+	text-transform: capitalize;
+	width: 90px;
+	&:active {
+		transform: scale(0.95);
+	}
+	&:hover {
+		background-color: $shadow-light;
+	}
+}
